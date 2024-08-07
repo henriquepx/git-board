@@ -279,13 +279,11 @@ const commonSituationsItems = [
   }
 ];
 
-
-
 const IntroText = () => {
     return (
         <div className="max-w-[800px] w-full mx-[auto] my-[0] mt-0 px-4 md:mt-24">
         <h1 className="text-4xl font-extrabold text-red-600 mt-8">Git Tutorial</h1>
-        <p className="text-lg text-gray-700">Aprenda todo o necessário sobre versionamento de código.</p>
+        <p className="text-lg text-gray-700">Tenha os códigos Git e sua explicação na palma da sua mão. Saiba algumas situações do dia e dúvidas recorrentes.</p>
         <div>
         <Accordion type="multiple" className="w-full">
             <AccordionItem value="topics">

@@ -639,14 +639,14 @@ const GitCommands = () => {
       </div>
       {filteredSections.map((section, index) => (
         <div key={index} className="mb-6">
-          <h2 className="text-xl font-bold mb-1 mt-10" id={section.id}>
+          <h2 className="text-lg font-bold mb-1 mt-10" id={section.id}>
             {section.title}
           </h2>
           <ul>
             {section.commands.map((cmd, cmdIndex) => (
               <li key={cmdIndex} className="mb-4 flex items-start">
                 <p className="ml-4 text-gray-700 flex-1">
-                  <Badge variant="default">{cmd.command}</Badge>: {cmd.explanation}
+                  <Badge variant="outline">{cmd.command}</Badge>: {cmd.explanation}
                 </p>
               </li>
             ))}
