@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Definição do array faqItems
 const faqItems = [
   {
     question: "O que é Git?",
