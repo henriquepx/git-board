@@ -15,16 +15,16 @@ const faqItems = [
     answer: `
       Para fazer um commit, siga estes passos:
       <br />1. Adicione suas mudanças ao índice (staging area) com:
-      <br /><code>"git add ."</code> - Este comando adiciona todas as mudanças no seu diretório de trabalho para o índice.
+      <br /><code>git add .</code> - Este comando adiciona todas as mudanças no seu diretório de trabalho para o índice.
       <br />2. Registre as mudanças no repositório com:
-      <br /><code>"git commit -m \"mensagem do commit\""</code> - Este comando cria um commit com a mensagem fornecida, registrando suas mudanças no histórico do repositório.
+      <br /><code>git commit -m "mensagem do commit"</code> - Este comando cria um commit com a mensagem fornecida, registrando suas mudanças no histórico do repositório.
     `
   },
   {
     question: "Como reverter um commit?",
     answer: `
       Para desfazer as mudanças introduzidas por um commit específico, use:
-      <br /><code>"git revert hash-do-commit"</code> - Este comando cria um novo commit que desfaz as alterações do commit especificado.
+      <br /><code>git revert hash-do-commit</code> - Este comando cria um novo commit que desfaz as alterações do commit especificado.
     `
   },
   {
@@ -36,9 +36,9 @@ const faqItems = [
     answer: `
       Para criar e usar uma nova branch, siga estas etapas:
       <br />1. Crie uma nova branch com:
-      <br /><code>"git branch nome-da-branch"</code> - Este comando cria uma nova branch com o nome especificado.
+      <br /><code>git branch nome-da-branch</code> - Este comando cria uma nova branch com o nome especificado.
       <br />2. Troque para a nova branch com:
-      <br /><code>"git checkout -b nome-da-branch"</code> - Este comando cria e muda para a nova branch em um único passo.
+      <br /><code>git checkout -b nome-da-branch</code> - Este comando cria e muda para a nova branch em um único passo.
     `
   },
   {
@@ -46,16 +46,16 @@ const faqItems = [
     answer: `
       Para mesclar as mudanças de uma branch para outra, siga estes passos:
       <br />1. Troque para a branch principal com:
-      <br /><code>"git checkout nome-da-branch-principal"</code> - Este comando muda para a branch onde você deseja mesclar as mudanças.
+      <br /><code>git checkout nome-da-branch-principal</code> - Este comando muda para a branch onde você deseja mesclar as mudanças.
       <br />2. Mescle a branch desejada com:
-      <br /><code>"git merge nome-da-branch"</code> - Este comando aplica as mudanças da branch especificada na branch atual.
+      <br /><code>git merge nome-da-branch</code> - Este comando aplica as mudanças da branch especificada na branch atual.
     `
   },
   {
     question: "Como faço para clonar um repositório?",
     answer: `
       Para copiar um repositório remoto para sua máquina local, use:
-      <br /><code>"git clone URL-do-repositório"</code> - Este comando cria uma cópia completa do repositório remoto no seu computador.
+      <br /><code>git clone URL-do-repositório</code> - Este comando cria uma cópia completa do repositório remoto no seu computador.
     `
   },
   {
@@ -63,28 +63,24 @@ const faqItems = [
     answer: "O rebase é uma técnica para integrar mudanças de uma branch em outra, aplicando os commits de forma linear, o que evita a criação de commits de merge e mantém um histórico mais limpo."
   },
   {
-    question: "Como faço para descartar mudanças não commitadas?",
+    question: "Como descartar mudanças não commitadas?",
     answer: `
       Para descartar alterações não commitadas em um arquivo específico, use:
-      <br /><code>"git checkout -- nome-do-arquivo"</code> - Este comando descarta todas as mudanças locais feitas no arquivo especificado.
+      <br /><code>git checkout -- nome-do-arquivo</code> - Este comando restaura o arquivo para o estado do último commit.
     `
   },
   {
     question: "Como faço para visualizar o histórico de commits?",
     answer: `
       Para ver a lista de commits feitos no repositório, utilize:
-      <br /><code>"git log"</code> - Este comando mostra o histórico de commits, incluindo mensagens, autores e hashes dos commits.
+      <br /><code>git log</code> - Este comando mostra o histórico de commits, incluindo mensagens, autores e hashes dos commits.
     `
   },
   {
     question: "O que é um conflito de merge?",
-    answer: "Um conflito de merge ocorre quando mudanças conflitantes são feitas em duas branches diferentes e precisam ser resolvidas manualmente. Para resolver, edite os arquivos em conflito, depois use <code>\"git add nome-do-arquivo\"</code> para marcar como resolvido e finalize o merge com <code>\"git commit\"</code>."
-  },
-  {
-    question: "Como reverter alterações não commitadas?",
     answer: `
-      Para descartar alterações não commitadas em um arquivo específico, use:
-      <br /><code>"git checkout -- nome-do-arquivo"</code> - Este comando restaura o arquivo para o estado do último commit.
+      Um conflito de merge ocorre quando mudanças conflitantes são feitas em duas branches diferentes e precisam ser resolvidas manualmente. 
+      Para resolver, edite os arquivos em conflito, depois use <code>git add nome-do-arquivo</code> para marcar como resolvido e finalize o merge com <code>git commit</code>.
     `
   },
   {
@@ -92,18 +88,11 @@ const faqItems = [
     answer: `
       Para trabalhar com branches, siga estas etapas:
       <br />1. Crie uma nova branch com:
-      <br /><code>"git branch nome-da-branch"</code>
+      <br /><code>git branch nome-da-branch</code>
       <br />2. Troque entre branches com:
-      <br /><code>"git checkout nome-da-branch"</code>
+      <br /><code>git checkout nome-da-branch</code>
       <br />3. Mescle mudanças com:
-      <br /><code>"git merge nome-da-branch"</code> - Este comando aplica as mudanças da branch especificada na branch atual.
-    `
-  },
-  {
-    question: "Como reverter um commit específico?",
-    answer: `
-      Para desfazer as mudanças de um commit específico e criar um novo commit que desfaz essas alterações, use:
-      <br /><code>"git revert hash-do-commit"</code> - Este comando cria um novo commit que reverte as alterações do commit especificado.
+      <br /><code>git merge nome-da-branch</code> - Este comando aplica as mudanças da branch especificada na branch atual.
     `
   },
   {
@@ -111,9 +100,9 @@ const faqItems = [
     answer: `
       Para atualizar seu repositório local com as mudanças do repositório remoto, siga estes passos:
       <br />1. Baixe as mudanças com:
-      <br /><code>"git fetch"</code> - Este comando baixa as mudanças sem aplicá-las.
+      <br /><code>git fetch</code> - Este comando baixa as mudanças sem aplicá-las.
       <br />2. Mescle as mudanças na branch atual com:
-      <br /><code>"git merge origin/main"</code> - Este comando aplica as mudanças baixadas da branch principal do remoto.
+      <br /><code>git merge origin/main</code> - Este comando aplica as mudanças baixadas da branch principal do remoto.
     `
   },
   {
@@ -121,18 +110,18 @@ const faqItems = [
     answer: `
       Para enviar suas mudanças locais para o repositório remoto, siga estes passos:
       <br />1. Adicione as mudanças ao índice com:
-      <br /><code>"git add ."</code> - Este comando adiciona todas as mudanças locais ao índice.
+      <br /><code>git add .</code> - Este comando adiciona todas as mudanças locais ao índice.
       <br />2. Crie um commit com:
-      <br /><code>"git commit -m \"mensagem do commit\""</code> - Este comando cria um commit com a mensagem fornecida.
+      <br /><code>git commit -m "mensagem do commit"</code> - Este comando cria um commit com a mensagem fornecida.
       <br />3. Envie as mudanças para o remoto com:
-      <br /><code>"git push origin nome-da-branch"</code> - Este comando envia as mudanças para a branch especificada no repositório remoto.
+      <br /><code>git push origin nome-da-branch</code> - Este comando envia as mudanças para a branch especificada no repositório remoto.
     `
   },
   {
     question: "Como fazer staging de mudanças parciais?",
     answer: `
       Para adicionar partes específicas de um arquivo ao índice, use:
-      <br /><code>"git add -p"</code> - Este comando permite selecionar interativamente partes de um arquivo para adicionar ao índice.
+      <br /><code>git add -p</code> - Este comando permite selecionar interativamente partes de um arquivo para adicionar ao índice.
     `
   }
 ];
@@ -172,16 +161,6 @@ const commonSituationsItems = [
       Para atualizar a branch principal com as últimas mudanças do repositório remoto, use:
       <br /><code>"git pull origin main"</code> - Este comando baixa as alterações da branch principal no repositório remoto e as aplica à sua branch local atual. 
       Se a branch remota estiver com um nome diferente, substitua "main" pelo nome correto da branch.
-    `
-  },
-  {
-    situation: "Resolvendo conflitos de merge",
-    resolution: `
-      Para resolver conflitos de merge, primeiro edite os arquivos que contêm conflitos para corrigir as diferenças. 
-      Após resolver os conflitos, use:
-      <br /><code>"git add nome-do-arquivo"</code> para marcar os arquivos como resolvidos.
-      Em seguida, finalize o merge com:
-      <br /><code>"git commit"</code> - Este comando cria um commit que registra a resolução dos conflitos e completa o merge.
     `
   },
   {
