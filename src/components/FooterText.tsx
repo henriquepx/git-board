@@ -10,7 +10,9 @@ import {
 } from "@/components/ui/sheet";
 import QrCodeImg from '../assets/qrcode.png';
 import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaWhatsapp, FaTiktok, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { IoLogoWhatsapp } from 'react-icons/io5';
+
 
 const FooterText = () => {
   return (
@@ -25,7 +27,8 @@ const FooterText = () => {
           <SheetHeader>
             <SheetTitle>Contribuição</SheetTitle>
             <SheetDescription>
-              Se este projeto te ajudou, considere enviar qualquer quantia via Pix usando o QR Code abaixo. A sua contribuição é muito importante e ajuda a manter este projeto ativo.
+              <p>Se este projeto te ajudou, você pode retribuir enviando qualquer quantia via Pix usando o QR Code abaixo. A sua contribuição é muito importante e ajuda a manter este projeto ativo.</p>
+              <p className='mt-2'>Caso tenha alguma crítica construtiva ou queira contribuir com o projeto, basta enviar mensagem por e-mail ou mandar um alô no Whatsapp.</p>
             </SheetDescription>
           </SheetHeader>
 
@@ -44,6 +47,10 @@ const FooterText = () => {
                 <FaEnvelope size={20} />
                 <span>henriquepinheiroxavier@gmail.com</span>
               </a>
+              <a href="https://wa.me/5521964823939?text=Ol%C3%A1%2C%20Henrique." target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+            <IoLogoWhatsapp size={20} className="bg-gray-700 text-white p-1 rounded-full" />
+            <span>Envie uma mensagem!</span>
+        </a>
             </div>
           </div>
 

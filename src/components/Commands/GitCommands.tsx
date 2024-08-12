@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
-const sections = [
+export const sections = [
   {
     "title": "Inicialização e Configuração",
     "id": "config",

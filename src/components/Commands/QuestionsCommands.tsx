@@ -1,11 +1,13 @@
 import React from 'react';
 
-const faqItems = [
+export const faqItems = [
   {
+    id: "o-que-e-git",
     question: "O que é Git?",
     answer: "Git é um sistema de controle de versão distribuído que permite rastrear mudanças no código-fonte durante o desenvolvimento de software."
   },
   {
+    id: "como-fazer-commit",
     question: "Como faço um commit?",
     answer: `
       Para fazer um commit, siga estes passos:
@@ -16,6 +18,7 @@ const faqItems = [
     `
   },
   {
+    id: "como-reverter-commit",
     question: "Como reverter um commit?",
     answer: `
       Para desfazer as mudanças introduzidas por um commit específico, use:
@@ -23,10 +26,12 @@ const faqItems = [
     `
   },
   {
+    id: "diferenca-git-github",
     question: "Qual a diferença entre Git e GitHub?",
     answer: "Git é um sistema de controle de versão que você usa localmente no seu computador, enquanto GitHub é uma plataforma de hospedagem na web para repositórios Git, que facilita a colaboração e o compartilhamento de código."
   },
   {
+    id: "como-fazer-branch",
     question: "Como faço um branch?",
     answer: `
       Para criar e usar uma nova branch, siga estas etapas:
@@ -37,6 +42,7 @@ const faqItems = [
     `
   },
   {
+    id: "como-fazer-merge",
     question: "Como faço o merge de uma branch?",
     answer: `
       Para mesclar as mudanças de uma branch para outra, siga estes passos:
@@ -47,24 +53,28 @@ const faqItems = [
     `
   },
   {
+    id: "como-clonar-repositorio",
     question: "Como faço para clonar um repositório?",
     answer: `
       Para copiar um repositório remoto para sua máquina local, use:
-      <br /><code>git clone URL-do-repositório</code> - Este comando cria uma cópia completa do repositório remoto no seu computador.
+      <br /><code>git clone URL-do-repositorio</code> - Este comando cria uma cópia completa do repositório remoto no seu computador.
     `
   },
   {
+    id: "o-que-e-rebase",
     question: "O que é um rebase?",
     answer: "O rebase é uma técnica para integrar mudanças de uma branch em outra, aplicando os commits de forma linear, o que evita a criação de commits de merge e mantém um histórico mais limpo."
   },
   {
-    question: "Como faço para descartar mudanças não commitadas?",
+    id: "como-descartar-mudancas",
+    question: "Como descartar mudanças não commitadas?",
     answer: `
       Para descartar alterações não commitadas em um arquivo específico, use:
-      <br /><code>git checkout -- nome-do-arquivo</code> - Este comando descarta todas as mudanças locais feitas no arquivo especificado.
+      <br /><code>git checkout -- nome-do-arquivo</code> - Este comando restaura o arquivo para o estado do último commit.
     `
   },
   {
+    id: "como-ver-historico-commits",
     question: "Como faço para visualizar o histórico de commits?",
     answer: `
       Para ver a lista de commits feitos no repositório, utilize:
@@ -72,17 +82,15 @@ const faqItems = [
     `
   },
   {
+    id: "o-que-e-conflito-merge",
     question: "O que é um conflito de merge?",
-    answer: "Um conflito de merge ocorre quando mudanças conflitantes são feitas em duas branches diferentes e precisam ser resolvidas manualmente. Para resolver, edite os arquivos em conflito, depois use <code>git add nome-do-arquivo</code> para marcar como resolvido e finalize o merge com <code>git commit</code>."
-  },
-  {
-    question: "Como reverter alterações não commitadas?",
     answer: `
-      Para descartar alterações não commitadas em um arquivo específico, use:
-      <br /><code>git checkout -- nome-do-arquivo</code> - Este comando restaura o arquivo para o estado do último commit.
+      Um conflito de merge ocorre quando mudanças conflitantes são feitas em duas branches diferentes e precisam ser resolvidas manualmente. 
+      Para resolver, edite os arquivos em conflito, depois use <code>git add nome-do-arquivo</code> para marcar como resolvido e finalize o merge com <code>git commit</code>.
     `
   },
   {
+    id: "como-trabalhar-branches",
     question: "Como trabalhar com branches?",
     answer: `
       Para trabalhar com branches, siga estas etapas:
@@ -95,13 +103,7 @@ const faqItems = [
     `
   },
   {
-    question: "Como reverter um commit específico?",
-    answer: `
-      Para desfazer as mudanças de um commit específico e criar um novo commit que desfaz essas alterações, use:
-      <br /><code>git revert hash-do-commit</code> - Este comando cria um novo commit que reverte as alterações do commit especificado.
-    `
-  },
-  {
+    id: "como-atualizar-repositorio-local",
     question: "Como atualizar o repositório local com mudanças remotas?",
     answer: `
       Para atualizar seu repositório local com as mudanças do repositório remoto, siga estes passos:
@@ -112,6 +114,7 @@ const faqItems = [
     `
   },
   {
+    id: "como-enviar-mudancas-repositorio-remoto",
     question: "Como mandar mudanças para o repositório remoto?",
     answer: `
       Para enviar suas mudanças locais para o repositório remoto, siga estes passos:
@@ -124,6 +127,7 @@ const faqItems = [
     `
   },
   {
+    id: "como-fazer-staging-parcial",
     question: "Como fazer staging de mudanças parciais?",
     answer: `
       Para adicionar partes específicas de um arquivo ao índice, use:
@@ -131,17 +135,16 @@ const faqItems = [
     `
   }
 ];
-
 const QuestionsCommands = () => {
     return (
         <div className="max-w-[800px] w-full mx-auto my-0 px-4">
             <hr className="my-8 border-t-2 border-gray-300" />
             <h1 className='text-lg font-bold mb-1 mt-2'>Dúvidas Frequentes</h1>
             {faqItems.map((item, index) => (
-                <div key={index} className="mb-3">
-                    <h2 className="text-sm font-bold mb-1 mt-2">{item.question}</h2>
-                    <p className="ml-6 text-gray-800 leading-6" dangerouslySetInnerHTML={{ __html: item.answer }}></p>
-                </div>
+              <div key={index} className="mb-3">
+                <h2 className="text-sm font-bold mb-1 mt-2" id={item.id}>{item.question}</h2>
+                <p className="ml-6 text-gray-800 leading-6" dangerouslySetInnerHTML={{ __html: item.answer }}></p>
+              </div>
             ))}
             <hr className="my-8 border-t-2 border-gray-300" />
         </div>
