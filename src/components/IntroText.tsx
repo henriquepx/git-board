@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion"
 import { faqItems } from "./Commands/QuestionsCommands";
 import { commonSituationsItems } from "./Commands/SituationsCommands";
+import { Button } from "./ui/button";
 
 const IntroText = () => {
     return (
@@ -45,7 +46,12 @@ const IntroText = () => {
                         <li>
                           <a href="#merge" className="text-black-500 hover:text-black-900 hover:underline">Merge e Rebase</a>
                         </li>
-                    </ul>
+                </ul>
+                <Button 
+                  className="mt-4" 
+                  onClick={() => window.open("https://wa.me/55219964823939?text=Olá!%20Gostaria%20de%20sugerir%20um%20novo%20tópico.", "_blank")}>
+                    Quer dar uma ideia de novo tópico? Envie uma mensagem.
+                </Button>
                 </AccordionContent>
             </AccordionItem>
             
@@ -59,6 +65,11 @@ const IntroText = () => {
                     </li>
                   ))}
                 </ul>
+                <Button 
+                  className="mt-4" 
+                  onClick={() => window.open("https://wa.me/55219964823939?text=Olá!%20Tenho%20uma%20dúvida%20específica%20e%20gostaria%20de%20esclarecê-la.", "_blank")}>
+                    Tem uma dúvida específica? Envie uma mensagem.
+                </Button>
               </AccordionContent>
             </AccordionItem>
             
@@ -72,6 +83,11 @@ const IntroText = () => {
                     </li>
                   ))}
                 </ul>
+                <Button 
+                  className="mt-4" 
+                  onClick={() => window.open("https://wa.me/55219964823939?text=Olá!%20Gostaria%20de%20compartilhar%20uma%20situação%20específica%20relacionada%20ao%20Git.", "_blank")}>
+                    Quer compartilhar uma situação específica? Envie uma mensagem.
+                </Button>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
